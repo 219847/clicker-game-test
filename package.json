@@ -1,20 +1,12 @@
 {
   "name": "clicker-game-test",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/js/app.js",
+  "private": true,
+  "type": "module",
   "scripts": {
     "test": "node --test"
   },
-  "repository": {
-    "type": "git",
-    "url": "http://localhost:26831/219847/clicker-game-test"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "chess.js": "^1.4.0"
-  },
-  "type": "module"
+  }
 }
