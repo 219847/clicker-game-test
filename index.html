@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess Puzzle Import Manager</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Chess Puzzle Manager</h1>
+      <p>Total stored puzzles: <strong id="stored-count">0</strong></p>
+
+      <section class="panel" aria-labelledby="import-heading">
+        <h2 id="import-heading">Administrative Puzzle Import</h2>
+        <div class="controls">
+          <input type="file" id="puzzle-json-file" accept="application/json" />
+          <button id="preview-import" type="button">Preview Import</button>
+        </div>
+
+        <div class="controls" style="margin-top: 0.75rem">
+          <label for="duplicate-strategy">Duplicate handling</label>
+          <select id="duplicate-strategy">
+            <option value="skip">Skip duplicates</option>
+            <option value="replace">Replace existing puzzles</option>
+          </select>
+          <button id="confirm-import" type="button" disabled>Confirm Import</button>
+        </div>
+
+        <div style="margin-top: 0.75rem">
+          <label for="import-progress">Import progress</label>
+          <progress id="import-progress" value="0" max="1" style="width: 100%"></progress>
+          <div id="import-progress-label">0%</div>
+        </div>
+
+        <p id="import-summary">Upload a JSON file to begin.</p>
+        <div id="import-details"></div>
+      </section>
+    </main>
+
+    <script type="module" src="./src/js/app.js"></script>
+  </body>
+</html>
